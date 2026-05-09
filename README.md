@@ -5,12 +5,6 @@
 </p>
 
 <p align="center">
-  <a href="https://victormoroo.github.io/Link_Aggregator/" target="_blank">
-    🔗 Ver projeto publicado
-  </a>
-</p>
-
-<p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=6366f1&labelColor=0d1117">
   <img alt="TypeScript" src="https://img.shields.io/static/v1?label=TypeScript&message=5.7&color=3178c6&labelColor=0d1117">
   <img alt="React" src="https://img.shields.io/static/v1?label=React&message=18&color=61dafb&labelColor=0d1117">
@@ -61,18 +55,15 @@ npm install
 npm run dev
 ```
 
-Abra [http://localhost:5173/Link_Aggregator/](http://localhost:5173/Link_Aggregator/) no navegador.
-
 ## Scripts disponíveis
 
 | Comando | Descrição |
 |---|---|
 | `npm run dev` | Inicia o servidor de desenvolvimento |
-| `npm run build` | Faz o build de produção em `dist/` |
-| `npm run preview` | Pré-visualiza o build de produção localmente |
+| `npm run build` | Gera o build de produção em `dist/` |
+| `npm run preview` | Pré-visualiza o build localmente |
 | `npm run lint` | Roda o ESLint |
 | `npm run format` | Formata o código com Prettier |
-| `npm run deploy` | Faz build e publica no GitHub Pages |
 
 ---
 
@@ -82,62 +73,30 @@ Abra o arquivo `src/data/links.ts`. Cada link é um objeto com esta estrutura:
 
 ```ts
 {
-  id: 'github',           // identificador único
-  label: 'GitHub',        // texto exibido no botão
-  url: 'https://...',     // URL de destino
-  icon: Github,           // ícone do Lucide React
-  external: true,         // abre em nova aba se true
-  disabled: false,        // exibe badge "em breve" se true
+  id: 'github',       // identificador único
+  label: 'GitHub',    // texto exibido no botão
+  url: 'https://...', // URL de destino
+  icon: Github,       // ícone do Lucide React
+  external: true,     // abre em nova aba se true
+  disabled: false,    // exibe badge "em breve" se true
 }
 ```
 
-Para adicionar um novo link, importe o ícone desejado do `lucide-react` e adicione um novo objeto ao array `links`.
-
-Para editar nome e handle, altere o objeto `profileData` no mesmo arquivo.
+Para adicionar um novo link, importe o ícone desejado do `lucide-react` e adicione um novo objeto ao array `links`. Nome e handle estão no objeto `profileData` no mesmo arquivo.
 
 ---
 
-## Deploy no GitHub Pages
+## Deploy
 
-### Manual (via npm)
+O projeto gera uma pasta `dist/` com arquivos estáticos prontos para qualquer plataforma:
 
 ```bash
-npm run deploy
+npm run build
 ```
 
-Isso faz o build e publica o conteúdo de `dist/` na branch `gh-pages`.
+Compatível com **Vercel**, **Netlify**, **Render**, **Cloudflare Pages** e qualquer serviço de hospedagem de sites estáticos.
 
-### Automático (via GitHub Actions)
-
-Crie o arquivo `.github/workflows/deploy.yml`:
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
-```
-
-> **Atenção:** se o repositório tiver um nome diferente de `Link_Aggregator`, ajuste o campo `base` em `vite.config.ts`.
+> Após o deploy, atualize a meta tag `og:url` em `index.html` com o seu domínio real.
 
 ---
 
@@ -162,8 +121,7 @@ jobs:
 │   ├── main.tsx
 │   └── index.css
 ├── index.html
-├── vite.config.ts
-└── tsconfig.json
+└── vite.config.ts
 ```
 
 ---
@@ -172,11 +130,11 @@ jobs:
 
 - [ ] Adicionar URL do portfólio em `links.ts` quando estiver pronto
 - [ ] Adicionar uma bio curta em `Profile.tsx`
-- [ ] Criar uma imagem OG (`og-image.png`) em `public/` e referenciar nas meta tags do `index.html`
-- [ ] Configurar domínio customizado (CNAME) no GitHub Pages
+- [ ] Criar uma imagem OG (`og-image.png`) em `public/` e referenciar em `index.html`
+- [ ] Atualizar a meta tag `og:url` com o domínio final
 
 ---
 
 ## Licença
 
-MIT — feito com ♥ por [Victor Moro](https://github.com/Victormoroo)
+MIT — desenvolvido por [Victor Moro](https://github.com/Victormoroo)
