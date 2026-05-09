@@ -1,9 +1,0 @@
-@media (min-width: 700px) {
-    :root {
-        --bg-url: url(../assets/img/Interface=Desktop\,\ Theme=Dark\ mode.jpg);
-    }
-
-    .light {
-        --bg-url: url(../assets/img/Interface=Desktop\,\ Theme=Light\ mode.jpg);
-    }
-}
