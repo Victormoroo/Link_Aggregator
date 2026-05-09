@@ -13,7 +13,7 @@
 <br />
 
 <p align="center">
-  <img alt="Preview do projeto" src=".github/Preview.jpg" width="80%">
+  <img alt="Preview do projeto" src=".github/template.png" width="80%">
 </p>
 
 ---
@@ -104,11 +104,11 @@ Compatível com **Vercel**, **Netlify**, **Render**, **Cloudflare Pages** e qual
 
 ```
 ├── public/
-│   └── favicon.ico
+│   ├── favicon.svg
+│   └── og-image.png
 ├── src/
 │   ├── assets/
-│   │   ├── avatar-dark.png
-│   │   └── avatar-light.png
+│   │   └── avatar.png
 │   ├── components/
 │   │   ├── LinkCard.tsx + .module.css
 │   │   ├── Profile.tsx + .module.css
@@ -123,18 +123,3 @@ Compatível com **Vercel**, **Netlify**, **Render**, **Cloudflare Pages** e qual
 ├── index.html
 └── vite.config.ts
 ```
-
----
-
-## Próximos passos sugeridos
-
-- [ ] Adicionar URL do portfólio em `links.ts` quando estiver pronto
-- [ ] Adicionar uma bio curta em `Profile.tsx`
-- [ ] Criar uma imagem OG (`og-image.png`) em `public/` e referenciar em `index.html`
-- [ ] Atualizar a meta tag `og:url` com o domínio final
-
----
-
-## Licença
-
-MIT — desenvolvido por [Victor Moro](https://github.com/Victormoroo)
