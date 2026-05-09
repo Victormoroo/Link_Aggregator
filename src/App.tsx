@@ -11,7 +11,7 @@ export default function App() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <Profile theme={theme} />
+        <Profile />
         <ThemeToggle theme={theme} onToggle={toggleTheme} />
         <nav aria-label="Links de perfil">
           <ul className={styles.list}>

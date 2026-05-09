@@ -1,15 +1,8 @@
-import avatarDark from '../assets/avatar-dark.png'
-import avatarLight from '../assets/avatar-light.png'
+import avatar from '../assets/avatar.png'
 import { profileData } from '../data/links'
 import styles from './Profile.module.css'
 
-interface ProfileProps {
-  theme: 'dark' | 'light'
-}
-
-export default function Profile({ theme }: ProfileProps) {
-  const avatar = theme === 'dark' ? avatarDark : avatarLight
-
+export default function Profile() {
   return (
     <section className={styles.profile} aria-label="Perfil">
       <img
