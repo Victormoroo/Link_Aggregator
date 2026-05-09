@@ -1,56 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
 
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    
-    <title>Victor Links</title>
-</head>
-<body>
-    <div id="container">
-        <div id="profile">
-            <img src="./assets/img/dark mode avatar.png" alt="Avatar">
-            <p>@victormoroo</p>
-        </div>
+    <title>Victor Moro — Links</title>
+    <meta name="description" content="Desenvolvedor Web. Encontre todos os meus links profissionais em um só lugar." />
+    <meta name="author" content="Victor Moro" />
 
-        <div id="switch" onclick="toggleMode()">
-            <button></button>
-            <span></span>
-        </div>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://victormoroo.github.io/Link_Aggregator/" />
+    <meta property="og:title" content="Victor Moro — Links" />
+    <meta property="og:description" content="Desenvolvedor Web. Encontre todos os meus links profissionais em um só lugar." />
 
-        <ul>
-            <li>
-                <a href="https://github.com/Victormoroo" target="_blank">GitHub</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/victormoroo/" target="_blank">Linkedin</a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/victormoroo/" target="_blank">Instagram</a>
-            </li>
-            <li>
-                <a href="#">My portfolio (in progress...)</a>
-            </li>
-        </ul>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Victor Moro — Links" />
+    <meta name="twitter:description" content="Desenvolvedor Web. Encontre todos os meus links profissionais em um só lugar." />
 
-        <div class="email">
-            <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
-            <p>victorhugo0609@outlook.com</p>
-        </div>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        <footer>
-            <p>Made by Victor Moro ♥</p>
-        </footer>
-    </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script src="./js/script.js"></script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
