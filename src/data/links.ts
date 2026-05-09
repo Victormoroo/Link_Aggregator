@@ -48,8 +48,8 @@ export const links: LinkItem[] = [
   },
   {
     id: 'email',
-    label: 'victorhugo0609@outlook.com',
-    url: 'mailto:victorhugo0609@outlook.com',
+    label: 'victormoro.dev@gmail.com',
+    url: 'mailto:victormoro.dev@gmail.com',
     icon: Mail,
     external: false,
   },
